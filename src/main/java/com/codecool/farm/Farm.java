@@ -7,20 +7,20 @@ import java.util.List;
 
 public class Farm {
 
-    public List<Animal> animals = new ArrayList<>();
+    private List<Animal> animals;
 
     public Farm(List<Animal> animals) {
         this.animals = animals;
+    }
+
+    public List<Animal> getAnimals() {
+        return animals;
     }
 
     public void feedAnimals() {
         for (Animal animal : animals) {
             animal.feed();
         }
-    }
-
-    public List<Animal> getAnimals() {
-        return animals;
     }
 
     public void butcher(Butcher butcher) {
@@ -39,7 +39,6 @@ public class Farm {
             animalStatus.add(status);
         }
         return animalStatus;
-
     }
 }
 
