@@ -25,7 +25,6 @@ public class Farm {
 
     public void butcher(Butcher butcher) {
         animals.removeIf(butcher::canButcher);
-
     }
 
     public boolean isEmpty() {
